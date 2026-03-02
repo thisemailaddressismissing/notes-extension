@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Rakinote",
+  "description": "A simple popup notes extension with formatting and history.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Rakinote",
+    "default_popup": "popup.html"
+  }
+}

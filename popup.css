@@ -1,0 +1,185 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #dbe2ea;
+  --accent: #2f6feb;
+  --danger: #c73e1d;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  width: 380px;
+  padding: 14px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tool-btn,
+button {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 0.84rem;
+}
+
+.tool-btn:hover,
+button:hover {
+  background: #f8faff;
+}
+
+.editor-wrap {
+  margin-top: 10px;
+}
+
+.editor {
+  min-height: 150px;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 10px;
+  line-height: 1.35;
+}
+
+.editor:focus {
+  outline: 2px solid #b7ccff;
+  border-color: #9ab8ff;
+}
+
+.editor:empty::before {
+  content: "Type your note here...";
+  color: #9ca3af;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.primary {
+  background: var(--accent);
+  color: white;
+  border-color: #2453b8;
+}
+
+.primary:hover {
+  background: #245ed7;
+}
+
+.secondary {
+  background: var(--panel);
+}
+
+.history-wrap {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history-header h2 {
+  margin: 0;
+  font-size: 0.96rem;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.history-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: 8px;
+}
+
+.history-content {
+  font-size: 0.86rem;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.history-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+}
+
+.danger {
+  color: white;
+  background: var(--danger);
+  border-color: #9f2b11;
+}
+
+.danger:hover {
+  background: #b33417;
+}
+
+.ghost {
+  background: transparent;
+  color: var(--danger);
+}
+
+.small {
+  font-size: 0.74rem;
+  padding: 5px 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
