@@ -6,16 +6,25 @@
     <title>Birthday Game for Mahi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&family=Pacifico&display=swap");
+
       :root {
         color-scheme: light;
+        --font-body: "Nunito", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        --font-fancy: "Pacifico", "Segoe Script", cursive;
       }
 
       body {
-        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        font-family: var(--font-body);
         min-width: 360px;
         margin: 0;
         background: radial-gradient(circle at top, #ffe8f3 0%, #f8f9ff 45%, #f2f5ff 100%);
         overflow-x: hidden;
+      }
+
+      .font-fancy {
+        font-family: var(--font-fancy);
+        letter-spacing: 0.01em;
       }
 
       .screen {
@@ -107,7 +116,7 @@
         <div id="confettiLayer" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
         <div class="relative z-10 rounded-3xl bg-white/80 backdrop-blur-sm border border-pink-100 h-full flex flex-col justify-center p-6 shadow-lg">
           <p class="text-sm text-pink-500 font-semibold tracking-wide">Birthday Mode</p>
-          <h1 class="text-4xl leading-tight font-bold text-slate-800 mt-3">Welcome to Level 2 🎂</h1>
+          <h1 class="font-fancy text-4xl leading-tight text-slate-800 mt-3">Welcome to Level 2 🎂</h1>
           <p class="mt-3 text-lg text-slate-700">Main Character: <span class="font-semibold">Mahi</span></p>
           <p class="mt-2 text-base text-slate-500">2 years unlocked with me</p>
         </div>
@@ -161,7 +170,7 @@
             but you don’t.<br />
             You just keep getting better every year.
           </p>
-          <p class="mt-10 text-lg text-rose-100 font-semibold">Happy Birthday, Mahi 🎂</p>
+          <p class="font-fancy mt-10 text-2xl text-rose-100">Happy Birthday, Mahi 🎂</p>
         </div>
       </section>
     </main>
